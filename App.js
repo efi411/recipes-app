@@ -1,10 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import Color from './constants/Colors'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Ninunim App!</Text>
+      <Icon name="favorite-border" size={30} color= {Color.primaryColor} />
+      <Icon name="desktop-windows" size={30} color= {Color.accentColor} />
+
     </View>
   );
 }
