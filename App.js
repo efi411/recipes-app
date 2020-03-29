@@ -1,24 +1,33 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import Color from './constants/Colors'
+import React, { useState } from "react";
+import { StyleSheet, View, Text } from "react-native";
+import WelcomeScreen from "./screens/WelcomeScreen";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Ninunim App!</Text>
-      <Icon name="favorite-border" size={30} color= {Color.primaryColor} />
-      <Icon name="desktop-windows" size={30} color= {Color.accentColor} />
+  const [isWelcomeScreen, setWelcomeScreen] = useState(true);
 
-    </View>
-  );
+  const startAppPage = () => {
+    setWelcomeScreen(false);
+  };
+
+  let currScreen = <WelcomeScreen onStartPress={startAppPage} />;
+  if (!isWelcomeScreen) {
+    currScreen = (
+      <View style={styles.temp}>
+        <Text>טקסט זמני...</Text>
+      </View>
+    );
+  }
+
+  return <View style={styles.screen}>{currScreen}</View>;
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  screen: {
+    flex: 1
   },
+  temp: {
+    flex: 1,
+    padding: 50,
+    alignItems: "center"
+  }
 });
