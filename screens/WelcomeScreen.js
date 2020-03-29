@@ -9,7 +9,7 @@ const WelcomePage = props => {
         source={require("../assets/gratin.jpg")}
         style={styles.BackgroundImage}
       >
-        <DefaultButton title="START RECIPING" onPress={props.onStartPress} />
+        <DefaultButton title="קדימה למתכונים" onPress={props.onStartPress} />
       </ImageBackground>
     </View>
   );
