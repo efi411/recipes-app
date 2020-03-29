@@ -13,7 +13,7 @@ export default function App() {
   if (!isWelcomeScreen) {
     currScreen = (
       <View style={styles.temp}>
-        <Text>New screen!!!</Text>
+        <Text>טקסט זמני...</Text>
       </View>
     );
   }
