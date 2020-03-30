@@ -1,4 +1,4 @@
-import Chef from "./models/chefs";
+import Chef from "./models/chef";
 import { Meal, Filters } from "./models/meals";
 
 export const Chef = [
