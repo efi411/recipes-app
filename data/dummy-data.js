@@ -1,5 +1,5 @@
 import Chef from "./models/chef";
-import { Meal, Filters } from "./models/meals";
+import { Meal, Filters } from "./models/meal";
 
 export const Chef = [
   new Chef("גיל", "#f5428d"),
