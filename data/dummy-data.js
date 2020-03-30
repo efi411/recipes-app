@@ -1,13 +1,13 @@
-import Category from '../../../models/category';
-import {Meal, Filters} from '../models/meal';
+import Chef from './models/chefs';
+import {Meal, Filters} from './models/meals';
 
-export const CATEGORIES = [
-  new Category('גיל', '#f5428d'),
-  new Category( 'אפי', '#f54242'),
-  new Category('אמא מיכל', '#f5a442'),
-  new Category('אמא טלי', '#f5d142'),
-  new Category('איתי', '#368dff'),
-  new Category('ניצן', '#368dff'),
+export const Chef = [
+  new Chef('גיל', '#f5428d'),
+  new Chef( 'אפי', '#f54242'),
+  new Chef('אמא מיכל', '#f5a442'),
+  new Chef('אמא טלי', '#f5d142'),
+  new Chef('איתי', '#368dff'),
+  new Chef('ניצן', '#368dff'),
 
 ];
 
