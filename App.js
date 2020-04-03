@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { StyleSheet, View, Text } from "react-native";
 import WelcomeScreen from "./screens/WelcomeScreen";
-import MealDetailsScreen from "./screens/MealDetailsScreen";
 
 export default function App() {
   const [isWelcomeScreen, setWelcomeScreen] = useState(true);
@@ -20,7 +19,6 @@ export default function App() {
   }
 
   return <View style={styles.screen}>{currScreen}</View>;
-  // return <MealDetailsScreen />;
 }
 
 const styles = StyleSheet.create({
