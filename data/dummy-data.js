@@ -1,7 +1,8 @@
-import Chef from "./models/chef";
-import { Meal, Filters } from "./models/meal";
+import Chef from "../models/chef";
+import Meal from "../models/meal";
+import Filters from "../models/filters";
 
-export const Chef = [
+export const CHEFS = [
   new Chef("גיל", "#f5428d"),
   new Chef("אפי", "#f54242"),
   new Chef("אמא מיכל", "#f5a442"),
