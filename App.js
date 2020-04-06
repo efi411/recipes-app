@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View } from "react-native";
 import WelcomeScreen from "./screens/WelcomeScreen";
+import CategoriesScreen from "./screens/CategoriesScreen";
 
 export default function App() {
   const [isWelcomeScreen, setWelcomeScreen] = useState(true);
@@ -11,11 +12,7 @@ export default function App() {
 
   let currScreen = <WelcomeScreen onStartPress={startAppPage} />;
   if (!isWelcomeScreen) {
-    currScreen = (
-      <View style={styles.temp}>
-        <Text>טקסט זמני...</Text>
-      </View>
-    );
+    currScreen = <CategoriesScreen />;
   }
 
   return <View style={styles.screen}>{currScreen}</View>;
@@ -23,11 +20,11 @@ export default function App() {
 
 const styles = StyleSheet.create({
   screen: {
-    flex: 1
+    flex: 1,
   },
   temp: {
     flex: 1,
     padding: 50,
-    alignItems: "center"
-  }
+    alignItems: "center",
+  },
 });
