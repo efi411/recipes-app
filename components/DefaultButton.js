@@ -1,15 +1,16 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { StyleSheet, TouchableOpacity } from "react-native";
 import Color from "../constants/Colors";
+import DefaultText from "./DefaultText";
 
-const DefaultButton = props => {
+const DefaultButton = (props) => {
   return (
     <TouchableOpacity
       style={{ ...styles.button, ...props.style }}
       onPress={props.onPress}
       activeOpacity={0.5}
     >
-      <Text style={styles.text}>{props.title}</Text>
+      <DefaultText style={styles.text}>{props.title}</DefaultText>
     </TouchableOpacity>
   );
 };
@@ -20,11 +21,12 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     alignItems: "center",
     justifyContent: "center",
-    padding: 15
+    padding: 15,
   },
   text: {
-    fontSize: 20
-  }
+    fontSize: 20,
+    color: "white",
+  },
 });
 
 export default DefaultButton;
