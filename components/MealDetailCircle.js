@@ -4,7 +4,7 @@
  *******************************************/
 
 import React from "react";
-import { StyleSheet, View, Text, ColorPropType } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import Color from "../constants/Colors";
 
 const MealDetailCircle = props => {
