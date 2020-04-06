@@ -5,7 +5,7 @@ import WelcomeScreen from "./screens/WelcomeScreen";
 try {
   I18nManager.forceRTL(true);
 } catch (e) {
-  console.log(e);
+ console.error(e);
 }
 
 export default function App() {
