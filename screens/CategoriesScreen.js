@@ -12,7 +12,7 @@ const MealDetailsScreen = (props) => {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require("../assets/categories-background.png")}
+        source={require("../assets/categories-bkg.png")}
         style={styles.image}
       >
         <FlatList
