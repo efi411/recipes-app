@@ -11,7 +11,7 @@ import Color from "../constants/Colors";
 import LineText from "../components/LineText";
 import MealDetailCircle from "../components/MealDetailCircle";
 
-const MealDetailsScreen = props => {
+const MealDetailsScreen = (props) => {
   const mealName = MEALS[0].title;
   const complexity = MEALS[0].complexity;
   const duration = MEALS[0].duration;
@@ -25,7 +25,7 @@ const MealDetailsScreen = props => {
     kosher = "בשרי";
   }
 
-  const IngListItem = props => {
+  const IngListItem = (props) => {
     return (
       <View style={styles.ingListItem}>
         <View style={styles.listIcon}>
@@ -36,7 +36,7 @@ const MealDetailsScreen = props => {
     );
   };
 
-  const StepListItem = props => {
+  const StepListItem = (props) => {
     return (
       <View style={styles.stepListItem}>
         <Text style={styles.stepText}>{props.index}.</Text>
@@ -70,7 +70,7 @@ const MealDetailsScreen = props => {
         <View style={styles.mealTitle}>
           <LineText style={{ marginBottom: 15 }}> מרכיבים:</LineText>
         </View>
-        {MEALS[0].ingredients.map(ingredient => (
+        {MEALS[0].ingredients.map((ingredient) => (
           <IngListItem key={ingredient}>{ingredient}</IngListItem>
         ))}
         <View style={styles.mealTitle}>
@@ -96,35 +96,35 @@ const MealDetailsScreen = props => {
 
 const styles = StyleSheet.create({
   screen: {
-    flex: 1
+    flex: 1,
   },
   image: {
     height: 200,
-    width: "100%"
+    width: "100%",
   },
   ingListItem: {
     marginBottom: 18,
     flexDirection: "row",
     width: "100%",
-    alignItems: "center"
+    alignItems: "center",
   },
   stepListItem: {
     marginBottom: 18,
     flexDirection: "row",
-    width: "100%"
+    width: "100%",
   },
   listIcon: {
     marginLeft: 5,
-    marginRight: 5
+    marginRight: 5,
   },
   mealTitle: {
     width: "100%",
     flexDirection: "row",
     justifyContent: "center",
-    marginTop: 20
+    marginTop: 20,
   },
   titleText: {
-    fontSize: 20
+    fontSize: 20,
   },
   circles: {
     flexDirection: "row",
@@ -134,20 +134,20 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderBottomWidth: 1,
     borderColor: Color.accentColor,
-    padding: 10
+    padding: 10,
   },
   steps: {
-    width: "80%"
+    width: "80%",
   },
   endScreeen: {
     alignItems: "center",
-    marginTop: 50
+    marginTop: 50,
   },
   stepText: {
     color: Color.primaryColor,
     marginLeft: 4,
-    marginRight: 2
-  }
+    marginRight: 2,
+  },
 });
 
 export default MealDetailsScreen;
