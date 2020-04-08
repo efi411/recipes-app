@@ -6,13 +6,13 @@
 import React, { useState, useEffect } from "react";
 import {
   View,
-  Text,
   StyleSheet,
   Image,
   TouchableOpacity,
   Animated,
 } from "react-native";
 import Color from "../constants/Colors";
+import DefaultText from "../components/DefaultText";
 
 const CategoryItem = (props) => {
   const [fadeAnim] = useState(new Animated.Value(0));
@@ -33,8 +33,8 @@ const CategoryItem = (props) => {
         >
           <Image source={props.image_url} />
         </Animated.View>
-        <View style={styles.container_text}>
-          <Text style={styles.title}>{props.title}</Text>
+        <View style={styles.containeText}>
+          <DefaultText style={styles.title}>{props.title}</DefaultText>
         </View>
       </View>
     </TouchableOpacity>
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 0.5, height: 0.5 },
     textShadowRadius: 0.5,
   },
-  container_text: {
+  containeText: {
     flex: 1,
     flexDirection: "column",
     marginLeft: 12,

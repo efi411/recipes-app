@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Text, I18nManager } from "react-native";
+import { StyleSheet, View, I18nManager } from "react-native";
 import WelcomeScreen from "./screens/WelcomeScreen";
 import CategoriesScreen from "./screens/CategoriesScreen";
 
 try {
   I18nManager.forceRTL(true);
 } catch (e) {
- console.error(e);
+  console.error(e);
 }
 
 export default function App() {

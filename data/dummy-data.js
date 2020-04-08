@@ -3,16 +3,44 @@ import Meal from "../models/meal";
 import Filters from "../models/filters";
 
 export const CHEFS = [
-  new Chef("גיל רותם", "#f5428d", require("../assets/gil.jpg")),
-  new Chef("אפרת רותם", "#f54242", require("../assets/efi.jpg")),
-  new Chef("מיכל צדוק", "#f5a442", require("../assets/michal-zadok.png")),
-  new Chef("טלי רותם", "#f5d142", require("../assets/tal-rotem.png")),
-  new Chef("איתי צדוק", "#368dff", require("../assets/itay-zadok.png")),
-  new Chef("ניצן רותם", "#368dff", require("../assets/nitzan-rotem.png")),
-  new Chef("אלון פרי", "#f5a442", require("../assets/alon-perry.png")),
-  new Chef("צליל סבירו", "#f5d142", require("../assets/tslil-saviro.png")),
-  new Chef("הילה שפיץ", "#368dff", require("../assets/hila-spitz.png")),
-  new Chef("מעין גפן", "#368dff", require("../assets/maayan-geffen.png")),
+  new Chef("גיל רותם", "#f5428d", require("../assets/chefsPics/gil.jpg")),
+  new Chef("אפרת רותם", "#f54242", require("../assets/chefsPics/efi.jpg")),
+  new Chef(
+    "מיכל צדוק",
+    "#f5a442",
+    require("../assets/chefsPics/michal-zadok.png")
+  ),
+  new Chef("טלי רותם", "#f5d142", require("../assets/chefsPics/tal-rotem.png")),
+  new Chef(
+    "איתי צדוק",
+    "#368dff",
+    require("../assets/chefsPics/itay-zadok.png")
+  ),
+  new Chef(
+    "ניצן רותם",
+    "#368dff",
+    require("../assets/chefsPics/nitzan-rotem.png")
+  ),
+  new Chef(
+    "אלון פרי",
+    "#f5a442",
+    require("../assets/chefsPics/alon-perry.png")
+  ),
+  new Chef(
+    "צליל סבירו",
+    "#f5d142",
+    require("../assets/chefsPics/tslil-saviro.png")
+  ),
+  new Chef(
+    "הילה שפיץ",
+    "#368dff",
+    require("../assets/chefsPics/hila-spitz.png")
+  ),
+  new Chef(
+    "מעין גפן",
+    "#368dff",
+    require("../assets/chefsPics/maayan-geffen.png")
+  ),
 ];
 
 export const MEALS = [
@@ -27,7 +55,7 @@ export const MEALS = [
       "כרובית שלמה",
       "2-3 תפוחי אדמה",
       "1 פחית קרם קוקוס",
-      "אבקת מרק, פלפל, חוויאג"
+      "אבקת מרק, פלפל, חוויאג",
     ],
     [
       "חותכים 2-3 תפוחי אדמה בינוניים לקוביות",
@@ -35,7 +63,7 @@ export const MEALS = [
       "מבשלים יחד את תפוחי האדמה והכרובית עם מלח עד שמוכן",
       "מועכים בעזרת בלנד מוט",
       "מוסיפים פלפל שחור, אבקת מרק וחוואיג'",
-      "שלב מבשלים כ-5 דקות ומוסיפים פחית קרם קוקוס ומשלימים בעוד כ-5 דקות בישול"
+      "שלב מבשלים כ-5 דקות ומוסיפים פחית קרם קוקוס ומשלימים בעוד כ-5 דקות בישול",
     ],
     new Filters(true, true, true, true, false, false, false)
   ),
