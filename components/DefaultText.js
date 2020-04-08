@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, Text } from "react-native";
-import Fonts from "../constants/Fonts";
 
 const DefaultText = (props) => {
   return (

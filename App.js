@@ -1,6 +1,12 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, I18nManager } from "react-native";
 import WelcomeScreen from "./screens/WelcomeScreen";
+
+try {
+  I18nManager.forceRTL(true);
+} catch (e) {
+ console.error(e);
+}
 
 export default function App() {
   const [isWelcomeScreen, setWelcomeScreen] = useState(true);
