@@ -4,24 +4,34 @@
  *******************************************/
 
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View } from "react-native";
 import Color from "../constants/Colors";
+import DefaultText from "./DefaultText";
 
-const LineHeader = props => {
+const LineText = (props) => {
+  const { textStyle, lineWeight, lineColor } = props;
+
+  const addedLineStyle = {
+    borderWidth: lineWeight ? lineWeight : 1,
+    borderColor: lineColor ? lineColor : Color.secondaryColor,
+    margin: textStyle && textStyle["fontSize"] ? textStyle["fontSize"] / 2 : 6,
+  };
+
   return (
-    <View>
-      <Text style={{ ...styles.text, ...props.style }}>{props.children}</Text>
-      <View style={styles.lineStyle} />
+    <View style={{ ...styles.comp, ...props.style }}>
+      <DefaultText style={{ ...textStyle }}>{props.children}</DefaultText>
+      <View style={{ ...styles.lineStyle, ...addedLineStyle }} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   lineStyle: {
-    borderWidth: 3,
-    borderColor: Color.primaryColor,
-    margin: 10
+    width: "80%",
   },
-  text: {}
+  comp: {
+    alignItems: "center",
+    alignSelf: "flex-start",
+  },
 });
-export default LineHeader;
+export default LineText;
