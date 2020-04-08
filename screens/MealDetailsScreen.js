@@ -4,12 +4,13 @@
  *******************************************/
 
 import React from "react";
-import { StyleSheet, View, Text, ScrollView, Image } from "react-native";
+import { StyleSheet, View, ScrollView, Image } from "react-native";
 import { MEALS } from "../data/dummy-data";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import Color from "../constants/Colors";
 import LineText from "../components/LineText";
 import MealDetailCircle from "../components/MealDetailCircle";
+import DefaultText from "../components/DefaultText";
 
 const MealDetailsScreen = (props) => {
   const mealName = MEALS[0].title;
@@ -31,7 +32,7 @@ const MealDetailsScreen = (props) => {
         <View style={styles.listIcon}>
           <Icon name="brightness-1" size={10} color={Color.primaryColor} />
         </View>
-        <Text>{props.children}</Text>
+        <DefaultText>{props.children}</DefaultText>
       </View>
     );
   };
@@ -39,8 +40,8 @@ const MealDetailsScreen = (props) => {
   const StepListItem = (props) => {
     return (
       <View style={styles.stepListItem}>
-        <Text style={styles.stepText}>{props.index}.</Text>
-        <Text>{props.children}</Text>
+        <DefaultText style={styles.stepText}>{props.index}.</DefaultText>
+        <DefaultText>{props.children}</DefaultText>
       </View>
     );
   };
@@ -87,7 +88,7 @@ const MealDetailsScreen = (props) => {
 
         <View style={styles.endScreeen}>
           <Icon name="local-dining" size={20} color={Color.primaryColor} />
-          <Text> בתאבון!</Text>
+          <DefaultText> בתאבון!</DefaultText>
         </View>
       </View>
     </ScrollView>
