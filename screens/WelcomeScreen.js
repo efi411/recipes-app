@@ -1,3 +1,8 @@
+/******************************************
+ *  Author : Efi
+ *  Created On : Sun Mar 29 2020
+ *******************************************/
+
 import React from "react";
 import { StyleSheet, View, ImageBackground } from "react-native";
 import DefaultButton from "../components/DefaultButton";
@@ -9,7 +14,7 @@ const WelcomePage = (props) => {
         source={require("../assets/gratin.jpg")}
         style={styles.BackgroundImage}
       >
-        <DefaultButton title="קדימה למתכונים" onPress={props.onStartPress} />
+        <DefaultButton title="אני רוצה להתחיל!" onPress={props.onStartPress} />
       </ImageBackground>
     </View>
   );

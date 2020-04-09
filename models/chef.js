@@ -1,7 +1,8 @@
 class Chef {
-  constructor(name, color) {
+  constructor(name, color, image) {
     this.name = name;
     this.color = color;
+    this.image = image;
   }
 }
 

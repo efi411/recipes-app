@@ -17,15 +17,20 @@ const DefaultButton = (props) => {
 
 const styles = StyleSheet.create({
   button: {
+    margin: 15,
     backgroundColor: Color.primaryColor,
     borderRadius: 5,
     alignItems: "center",
     justifyContent: "center",
+    elevation: 8,
     padding: 15,
   },
   text: {
-    fontSize: 20,
+    fontSize: 22,
     color: "white",
+    textShadowColor: "black",
+    textShadowOffset: { width: 0.5, height: 0.5 },
+    textShadowRadius: 0.5,
   },
 });
 
