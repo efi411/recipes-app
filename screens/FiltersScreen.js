@@ -23,6 +23,7 @@ const FiltersScreen = (props) => {
       <View style={styles.filterContainer}>
         <DefaultText style={styles.text}>{text}</DefaultText>
         <Switch
+          trackColor={{ true: Color.primaryColor }}
           value={isOn}
           onValueChange={(newValue) => setSwitch(newValue)}
         />
