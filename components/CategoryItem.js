@@ -33,7 +33,7 @@ const CategoryItem = (props) => {
         >
           <Image source={props.image_url} />
         </Animated.View>
-        <View style={styles.containeText}>
+        <View style={styles.containerText}>
           <DefaultText style={styles.title}>{props.title}</DefaultText>
         </View>
       </View>
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 0.5, height: 0.5 },
     textShadowRadius: 0.5,
   },
-  containeText: {
+  containerText: {
     flex: 1,
     flexDirection: "column",
     marginLeft: 12,
