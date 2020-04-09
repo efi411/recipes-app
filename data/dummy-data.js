@@ -3,8 +3,12 @@ import Meal from "../models/meal";
 import Filters from "../models/filters";
 
 export const CHEFS = [
-  new Chef("גיל רותם", "#f5428d", require("../assets/chefsPics/gil.jpg")),
-  new Chef("אפרת רותם", "#f54242", require("../assets/chefsPics/efi.jpg")),
+  new Chef("גיל רותם", "#f5428d", require("../assets/chefsPics/gil-rotem.jpg")),
+  new Chef(
+    "אפרת רותם",
+    "#f54242",
+    require("../assets/chefsPics/efi-rotem.jpg")
+  ),
   new Chef(
     "מיכל צדוק",
     "#f5a442",
