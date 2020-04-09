@@ -9,9 +9,10 @@ import Color from "../constants/Colors";
 import DefaultText from "./DefaultText";
 
 const LineText = (props) => {
-  const { textStyle, lineWeight, lineColor } = props;
+  const { textStyle, lineWeight, lineColor, lineWidth } = props;
 
   const addedLineStyle = {
+    width: lineWidth ? lineWidth : "80%",
     borderWidth: lineWeight ? lineWeight : 1,
     borderColor: lineColor ? lineColor : Color.secondaryColor,
     margin: textStyle && textStyle["fontSize"] ? textStyle["fontSize"] / 2 : 6,
