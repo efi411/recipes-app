@@ -8,7 +8,7 @@ import {
   View,
   StyleSheet,
   Image,
-  TouchableOpacity,
+  TouchableNativeFeedback,
   Animated,
 } from "react-native";
 import Color from "../constants/Colors";
@@ -24,7 +24,7 @@ const CategoryItem = (props) => {
   }, []);
 
   return (
-    <TouchableOpacity activeOpacity={0.9} onPress={() => {}}>
+    <TouchableNativeFeedback activeOpacity={0.6} onPress={() => {}}>
       <View style={styles.container}>
         <Animated.View
           style={{
@@ -37,7 +37,7 @@ const CategoryItem = (props) => {
           <DefaultText style={styles.title}>{props.title}</DefaultText>
         </View>
       </View>
-    </TouchableOpacity>
+    </TouchableNativeFeedback>
   );
 };
 
