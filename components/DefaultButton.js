@@ -10,7 +10,9 @@ const DefaultButton = (props) => {
       onPress={props.onPress}
       activeOpacity={0.5}
     >
-      <DefaultText style={styles.text}>{props.title}</DefaultText>
+      <DefaultText type="button" style={styles.text}>
+        {props.title}
+      </DefaultText>
     </TouchableOpacity>
   );
 };
