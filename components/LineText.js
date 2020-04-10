@@ -9,7 +9,7 @@ import Color from "../constants/Colors";
 import DefaultText from "./DefaultText";
 
 const LineText = (props) => {
-  const { textStyle, lineWeight, lineColor, lineWidth } = props;
+  const { textStyle, lineWeight, lineColor, lineWidth, type } = props;
 
   const addedLineStyle = {
     width: lineWidth ? lineWidth : "80%",
@@ -20,7 +20,9 @@ const LineText = (props) => {
 
   return (
     <View style={{ ...styles.comp, ...props.style }}>
-      <DefaultText style={{ ...textStyle }}>{props.children}</DefaultText>
+      <DefaultText type={type ? type : "regular"} style={{ ...textStyle }}>
+        {props.children}
+      </DefaultText>
       <View style={{ ...styles.lineStyle, ...addedLineStyle }} />
     </View>
   );

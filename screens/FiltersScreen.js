@@ -6,7 +6,7 @@
 import React, { useState } from "react";
 import { StyleSheet, View, Switch } from "react-native";
 import DefaultText from "../components/DefaultText";
-import LineText from "../components//LineText";
+import LineText from "../components/LineText";
 import Color from "../constants/Colors";
 
 const FiltersScreen = (props) => {
@@ -24,6 +24,7 @@ const FiltersScreen = (props) => {
         <DefaultText style={styles.text}>{text}</DefaultText>
         <Switch
           trackColor={{ true: Color.primaryColor }}
+          thumbColor={"white"}
           value={isOn}
           onValueChange={(newValue) => setSwitch(newValue)}
         />
@@ -34,6 +35,7 @@ const FiltersScreen = (props) => {
   return (
     <View style={styles.screen}>
       <LineText
+        type="title"
         textStyle={styles.title}
         lineWeight={3}
         lineWidth={70}
@@ -65,7 +67,6 @@ const styles = StyleSheet.create({
   title: {
     marginTop: 20,
     fontSize: 24,
-    fontWeight: "bold",
   },
   text: {
     fontSize: 20,
