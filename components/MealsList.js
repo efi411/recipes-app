@@ -13,7 +13,7 @@ import {
 import MealItem from "../components/MealItem";
 
 const MealsList = (props) => {
-  let { mealsData, chefName } = props;
+  let { mealsData } = props;
 
   const renderMealItem = (itemData) => {
     return (
