@@ -50,7 +50,7 @@ export const CHEFS = [
 export const MEALS = [
   new Meal(
     "m1",
-    "גיל",
+    "גיל רותם",
     "מרק כרובית",
     "פשוט",
     "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg",
@@ -73,7 +73,7 @@ export const MEALS = [
   ),
   new Meal(
     "m2",
-    "אפי",
+    "מיכל צדוק",
     "קציצות ברוקולי",
     "בינוני",
     "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg",
@@ -84,7 +84,7 @@ export const MEALS = [
   ),
   new Meal(
     "m3",
-    "אפי",
+    "אפרת רותם",
     "מרק עדשים כתומות",
     "פשוט",
     "https://www.sugat.com/wp-content/uploads/2017/10/orange-lentils-and-zuccini-soup-720x480.jpg",
@@ -107,7 +107,7 @@ export const MEALS = [
   ),
   new Meal(
     "m4",
-    "גיל",
+    "גיל רותם",
     "חומוס אפונה",
     "פשוט",
     "https://www.sugat.com/wp-content/uploads/2019/10/hummus_afuna_reutezer-720x480.jpg",
@@ -130,7 +130,7 @@ export const MEALS = [
   ),
   new Meal(
     "m5",
-    "גיל",
+    "גיל רותם",
     "אורז בסמטי עם גרגירי חומוס וירקות",
     "פשוט",
     "https://www.sugat.com/wp-content/uploads/2020/02/IMG_0481_copy-720x480.jpg",
@@ -148,7 +148,7 @@ export const MEALS = [
   ),
   new Meal(
     "m6",
-    "גיל",
+    "גיל רותם",
     "חמין עשיר",
     "פשוט",
     "https://www.sugat.com/wp-content/uploads/2020/03/KRT_6827-720x480.jpg",
