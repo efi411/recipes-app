@@ -3,44 +3,62 @@ import Meal from "../models/meal";
 import Filters from "../models/filters";
 
 export const CHEFS = [
-  new Chef("גיל רותם", "#f5428d", require("../assets/chefsPics/gil-rotem.jpg")),
   new Chef(
+    "c1",
+    "גיל רותם",
+    "#f5428d",
+    require("../assets/chefsPics/gil-rotem.jpg")
+  ),
+  new Chef(
+    "c2",
     "אפרת רותם",
     "#f54242",
     require("../assets/chefsPics/efi-rotem.jpg")
   ),
   new Chef(
+    "c3",
     "מיכל צדוק",
     "#f5a442",
     require("../assets/chefsPics/michal-zadok.png")
   ),
-  new Chef("טלי רותם", "#f5d142", require("../assets/chefsPics/tal-rotem.png")),
   new Chef(
+    "c4",
+    "טלי רותם",
+    "#f5d142",
+    require("../assets/chefsPics/tal-rotem.png")
+  ),
+  new Chef(
+    "c5",
     "איתי צדוק",
     "#368dff",
     require("../assets/chefsPics/itay-zadok.png")
   ),
   new Chef(
+    "c5",
     "ניצן רותם",
     "#368dff",
     require("../assets/chefsPics/nitzan-rotem.png")
   ),
   new Chef(
+    "c6",
     "אלון פרי",
     "#f5a442",
     require("../assets/chefsPics/alon-perry.png")
   ),
   new Chef(
+    "c7",
     "צליל סבירו",
     "#f5d142",
     require("../assets/chefsPics/tslil-saviro.png")
   ),
   new Chef(
+    "c8",
     "הילה שפיץ",
     "#368dff",
     require("../assets/chefsPics/hila-spitz.png")
   ),
   new Chef(
+    "c9",
     "מעין גפן",
     "#368dff",
     require("../assets/chefsPics/maayan-geffen.png")
@@ -50,10 +68,10 @@ export const CHEFS = [
 export const MEALS = [
   new Meal(
     "m1",
-    "גיל רותם",
+    "c1",
     "מרק כרובית",
     "פשוט",
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg",
+    require("../assets/chefsPics/maayan-geffen.png"),
     60,
     [
       "כרובית שלמה",
@@ -73,21 +91,21 @@ export const MEALS = [
   ),
   new Meal(
     "m2",
-    "מיכל צדוק",
+    "c2",
     "קציצות ברוקולי",
     "בינוני",
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg",
+    require("../assets/chefsPics/tslil-saviro.png"),
     90,
-    ["ברוקולי", "ברוקולי", "ברוקולי", "ברוקולי"],
+    ["ברוקולי4", "ברוקולי3", "ברוקולי2", "ברוקולי"],
     ["שלב 1", "שלב 2", "שלב 3", "שלב 4", "שלב 5"],
     new Filters(false, false, true, false, true, false, false)
   ),
   new Meal(
     "m3",
-    "אפרת רותם",
+    "c7",
     "מרק עדשים כתומות",
     "פשוט",
-    "https://www.sugat.com/wp-content/uploads/2017/10/orange-lentils-and-zuccini-soup-720x480.jpg",
+    require("../assets/chefsPics/itay-zadok.png"),
     60,
     [
       "2-3 כפות שמן זית",
@@ -107,10 +125,10 @@ export const MEALS = [
   ),
   new Meal(
     "m4",
-    "גיל רותם",
+    "c1",
     "חומוס אפונה",
     "פשוט",
-    "https://www.sugat.com/wp-content/uploads/2019/10/hummus_afuna_reutezer-720x480.jpg",
+    require("../assets/chefsPics/itay-zadok.png"),
     60,
     [
       "1/2 1 ליטר מים",
@@ -130,10 +148,10 @@ export const MEALS = [
   ),
   new Meal(
     "m5",
-    "גיל רותם",
+    "c4",
     "אורז בסמטי עם גרגירי חומוס וירקות",
     "פשוט",
-    "https://www.sugat.com/wp-content/uploads/2020/02/IMG_0481_copy-720x480.jpg",
+    require("../assets/chefsPics/itay-zadok.png"),
     60,
     ["כרובית ", "2-3 תפוחי אדמה", "1 פחית קרם קוקוס", "אבקת מרק, פלפל, חוויאג"],
     [
@@ -148,10 +166,10 @@ export const MEALS = [
   ),
   new Meal(
     "m6",
-    "גיל רותם",
+    "c1",
     "חמין עשיר",
     "פשוט",
-    "https://www.sugat.com/wp-content/uploads/2020/03/KRT_6827-720x480.jpg",
+    require("../assets/chefsPics/tal-rotem.png"),
     60,
     [
       "כרובית שלמה",

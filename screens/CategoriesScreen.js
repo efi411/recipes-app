@@ -8,7 +8,8 @@ import { StyleSheet, View, FlatList, ImageBackground } from "react-native";
 import { CHEFS } from "../data/dummy-data";
 import CategoryItem from "../components/CategoryItem";
 
-const MealDetailsScreen = (props) => {
+const CategoriesScreen = (props) => {
+  const { navigation } = props;
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -19,8 +20,13 @@ const MealDetailsScreen = (props) => {
           data={CHEFS}
           renderItem={(itemData) => (
             <CategoryItem
+              onPress={() =>
+                navigation.navigate("ChefMeals", {
+                  chefId: itemData.item.id,
+                })
+              }
               title={itemData.item.name}
-              image_url={itemData.item.image}
+              imageUrl={itemData.item.image}
             />
           )}
           keyExtractor={(chef) => chef.name}
@@ -32,7 +38,6 @@ const MealDetailsScreen = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 30,
     flex: 1,
   },
   image: {
@@ -42,4 +47,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MealDetailsScreen;
+export default CategoriesScreen;

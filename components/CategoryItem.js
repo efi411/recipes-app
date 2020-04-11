@@ -24,14 +24,14 @@ const CategoryItem = (props) => {
   }, []);
 
   return (
-    <TouchableNativeFeedback activeOpacity={0.6} onPress={() => {}}>
+    <TouchableNativeFeedback activeOpacity={0.6} onPress={props.onPress}>
       <View style={styles.container}>
         <Animated.View
           style={{
             opacity: fadeAnim,
           }}
         >
-          <Image source={props.image_url} />
+          <Image source={props.imageUrl} />
         </Animated.View>
         <View style={styles.containerText}>
           <DefaultText style={styles.title}>{props.title}</DefaultText>

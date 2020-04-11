@@ -16,14 +16,13 @@ import DefaultText from "../components/DefaultText";
 import Color from "../constants/Colors";
 import Icon from "react-native-vector-icons/MaterialIcons";
 
-const getWidth = () => {
+const getSize = (dim) => {
   const imageSizeWeight = Dimensions.get("window").width / 2.4;
-  return { width: imageSizeWeight };
-};
-
-const getHeight = () => {
-  const imageSizeHeight = Dimensions.get("window").height / 4;
-  return { height: imageSizeHeight };
+  if (dim === "height") {
+    return { height: imageSizeWeight };
+  } else if (dim === "width") {
+    return { width: imageSizeWeight };
+  }
 };
 
 const MealItem = (props) => {
@@ -31,22 +30,25 @@ const MealItem = (props) => {
   useEffect(() => {
     Animated.timing(fadeAnim, {
       toValue: 1,
-      duration: 1500,
+      duration: 1000,
     }).start();
   }, []);
 
   let { mealName, mealImage, mealDuration } = props;
 
   return (
-    <TouchableNativeFeedback activeOpacity={0.6} onPress={() => {}}>
+    <TouchableNativeFeedback activeOpacity={0.6} onPress={props.onPress}>
       <View style={{ ...styles.container }}>
         <Animated.View
           style={{
             opacity: fadeAnim,
           }}
         >
-          <Image style={{ ...getWidth(), ...getHeight() }} source={mealImage} />
-          <View style={getWidth()}>
+          <Image
+            style={{ ...getSize("width"), ...getSize("height") }}
+            source={mealImage}
+          />
+          <View style={getSize("width")}>
             <DefaultText type="button" style={{ fontSize: 24 }}>
               {mealName}
             </DefaultText>
