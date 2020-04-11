@@ -9,10 +9,9 @@ import MealsList from "../components/MealsList";
 
 const ChefMealScreen = (props) => {
   let { chefName } = props;
-  chefName = chefName ? chefName : "גיל רותם";
 
   const chefMeals = MEALS.filter((meal) => meal.chef == chefName);
-  return <MealsList mealsData={chefMeals} chefName={chefName} />;
+  return <MealsList mealsData={chefMeals} />;
 };
 
 export default ChefMealScreen;
