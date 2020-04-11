@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
   list: {
     flex: 1,
     marginTop: 50,
-    alignItems: "center",
   },
 });
 
