@@ -13,11 +13,16 @@ import {
 import MealItem from "../components/MealItem";
 
 const MealsList = (props) => {
-  let { mealsData } = props;
+  let { mealsData, navigation } = props;
 
   const renderMealItem = (itemData) => {
     return (
       <MealItem
+        onPress={() =>
+          navigation.navigate("MealDetails", {
+            mealId: itemData.item.id,
+          })
+        }
         mealName={itemData.item.title}
         mealImage={itemData.item.image}
         mealDuration={itemData.item.duration}

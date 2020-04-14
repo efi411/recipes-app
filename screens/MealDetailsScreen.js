@@ -13,11 +13,15 @@ import MealDetailCircle from "../components/MealDetailCircle";
 import DefaultText from "../components/DefaultText";
 
 const MealDetailsScreen = (props) => {
-  const mealName = MEALS[0].title;
-  const complexity = MEALS[0].complexity;
-  const duration = MEALS[0].duration;
-  const isDairy = MEALS[0].filters.isDairy;
-  const isMeat = MEALS[0].filters.isMeat;
+  let { mealId } = props.route.params;
+
+  const meal = MEALS.find((meal) => meal.id == mealId);
+
+  const mealName = meal.title;
+  const complexity = meal.complexity;
+  const duration = meal.duration;
+  const isDairy = meal.filters.isDairy;
+  const isMeat = meal.filters.isMeat;
 
   let kosher = "פרווה";
   if (isDairy) {
@@ -49,7 +53,7 @@ const MealDetailsScreen = (props) => {
   return (
     <ScrollView>
       <View style={styles.screen}>
-        <Image source={require("../assets/cfSoup.jpg")} style={styles.image} />
+        <Image source={meal.image} style={styles.image} />
         <View style={styles.mealTitle}>
           <LineText
             textStyle={styles.titleText}
@@ -71,7 +75,7 @@ const MealDetailsScreen = (props) => {
         <View style={styles.mealTitle}>
           <LineText style={{ marginBottom: 15 }}> מרכיבים:</LineText>
         </View>
-        {MEALS[0].ingredients.map((ingredient) => (
+        {meal.ingredients.map((ingredient) => (
           <IngListItem key={ingredient}>{ingredient}</IngListItem>
         ))}
         <View style={styles.mealTitle}>
@@ -79,7 +83,7 @@ const MealDetailsScreen = (props) => {
         </View>
 
         <View style={styles.steps}>
-          {MEALS[0].steps.map((step, index) => (
+          {meal.steps.map((step, index) => (
             <StepListItem key={step} index={index + 1}>
               {step}
             </StepListItem>
