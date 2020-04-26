@@ -3,7 +3,7 @@
  *  Created On : Tue Mar 31 2020
  *******************************************/
 
-import React from "react";
+import React, { useEffect } from "react";
 import { StyleSheet, View, ScrollView, Image } from "react-native";
 import { MEALS } from "../data/dummy-data";
 import Icon from "react-native-vector-icons/MaterialIcons";
@@ -13,9 +13,14 @@ import MealDetailCircle from "../components/MealDetailCircle";
 import DefaultText from "../components/DefaultText";
 
 const MealDetailsScreen = (props) => {
+  const { navigation } = props;
   let { mealId } = props.route.params;
 
   const meal = MEALS.find((meal) => meal.id == mealId);
+
+  useEffect(() => {
+    navigation.setOptions({ title: meal.title });
+  }, []);
 
   const mealName = meal.title;
   const complexity = meal.complexity;

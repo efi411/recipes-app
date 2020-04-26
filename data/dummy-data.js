@@ -34,31 +34,31 @@ export const CHEFS = [
     require("../assets/chefsPics/itay-zadok.png")
   ),
   new Chef(
-    "c5",
+    "c6",
     "ניצן רותם",
     "#368dff",
     require("../assets/chefsPics/nitzan-rotem.png")
   ),
   new Chef(
-    "c6",
+    "c7",
     "אלון פרי",
     "#f5a442",
     require("../assets/chefsPics/alon-perry.png")
   ),
   new Chef(
-    "c7",
+    "c8",
     "צליל סבירו",
     "#f5d142",
     require("../assets/chefsPics/tslil-saviro.png")
   ),
   new Chef(
-    "c8",
+    "c9",
     "הילה שפיץ",
     "#368dff",
     require("../assets/chefsPics/hila-spitz.png")
   ),
   new Chef(
-    "c9",
+    "c10",
     "מעין גפן",
     "#368dff",
     require("../assets/chefsPics/maayan-geffen.png")

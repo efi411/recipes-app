@@ -3,8 +3,8 @@
  *  Created On : Fri Apr 10 2020
  *******************************************/
 
-import React from "react";
-import { MEALS } from "../data/dummy-data";
+import React, { useEffect } from "react";
+import { MEALS, CHEFS } from "../data/dummy-data";
 import MealsList from "../components/MealsList";
 
 const ChefMealsScreen = (props) => {
@@ -12,6 +12,11 @@ const ChefMealsScreen = (props) => {
   let { chefId } = props.route.params;
 
   const chefMeals = MEALS.filter((meal) => meal.chef == chefId);
+  const chef = CHEFS.find((chef) => chef.id == chefId);
+
+  useEffect(() => {
+    navigation.setOptions({ title: chef.name });
+  }, []);
 
   return <MealsList navigation={navigation} mealsData={chefMeals} />;
 };
