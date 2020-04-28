@@ -3,7 +3,7 @@ import { StyleSheet, View, I18nManager } from "react-native";
 import { AppLoading } from "expo";
 import { useFonts } from "@use-expo/font";
 import WelcomeScreen from "./screens/WelcomeScreen";
-import Navigator from "./navigation/Navigator";
+import DrawerNavigator from "./navigation/Navigators";
 
 try {
   I18nManager.forceRTL(true);
@@ -20,7 +20,7 @@ export default (props) => {
 
   let currScreen = <WelcomeScreen onStartPress={startAppPage} />;
   if (!isWelcomeScreen) {
-    currScreen = <Navigator />;
+    currScreen = <DrawerNavigator />;
   }
 
   let [fontsLoaded] = useFonts({
