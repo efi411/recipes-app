@@ -49,7 +49,7 @@ const menuIcon = (onPressFunc) => (
   />
 );
 
-const SaveIcon = () => (
+const saveIcon = () => (
   <Icon.Button
     name="save"
     size={25}
@@ -70,7 +70,7 @@ const StackNavigatorFilters = (props) => {
         options={{
           title: "פילטרים",
           headerLeft: menuIcon.bind(this, navigation.openDrawer),
-          headerRight: SaveIcon,
+          headerRight: saveIcon,
         }}
       />
     </Stack.Navigator>
