@@ -23,6 +23,7 @@ const CategoriesScreen = (props) => {
               onPress={() =>
                 navigation.navigate("ChefMeals", {
                   chefId: itemData.item.id,
+                  chefName: itemData.item.name,
                 })
               }
               title={itemData.item.name}

@@ -3,10 +3,14 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import Icon from "react-native-vector-icons/MaterialIcons";
+
 import CategoriesScreen from "../screens/CategoriesScreen";
 import ChefMealsScreen from "../screens/ChefMealsScreen";
-import MealDetailsScreen from "../screens/MealDetailsScreen";
+import MealDetailsScreen, {
+  mealDetailsScreenOptions,
+} from "../screens/MealDetailsScreen";
 import FilterScreen from "../screens/FiltersScreen";
+
 import Color from "../constants/Colors";
 
 const defaultOptions = {
@@ -94,7 +98,7 @@ const StackNavigatorMeals = (props) => {
       <Stack.Screen
         name="ChefMeals"
         component={ChefMealsScreen}
-        options={{ title: "" }}
+        options={mealDetailsScreenOptions}
       />
       <Stack.Screen
         name="MealDetails"
