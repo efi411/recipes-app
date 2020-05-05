@@ -2,9 +2,9 @@ import React from "react";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import Color from "../constants/Colors";
 
-export const menuIcon = (onPressFunc) => (
+export const menuIcon = (iconName, onPressFunc) => (
   <Icon.Button
-    name="menu"
+    name={iconName}
     size={25}
     backgroundColor={Color.primaryColor}
     onPress={() => onPressFunc()}

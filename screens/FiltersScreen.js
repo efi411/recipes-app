@@ -59,7 +59,7 @@ const FiltersScreen = (props) => {
 export const filtersScreenOptions = (navData) => {
   return {
     title: "פילטרים",
-    headerLeft: menuIcon.bind(this, navData.navigation.openDrawer),
+    headerLeft: menuIcon.bind(this, "menu", navData.navigation.openDrawer),
     headerRight: saveIcon,
   };
 };

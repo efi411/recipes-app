@@ -24,7 +24,7 @@ const CategoriesScreen = (props) => {
               onPress={() =>
                 navigation.navigate("ChefMeals", {
                   chefId: itemData.item.id,
-                  chefName: itemData.item.name
+                  chefName: itemData.item.name,
                 })
               }
               title={itemData.item.name}
@@ -41,7 +41,7 @@ const CategoriesScreen = (props) => {
 export const categoriesScreenOptions = (navData) => {
   return {
     title: "משתמשים",
-    headerLeft: menuIcon.bind(this, navData.navigation.openDrawer),
+    headerLeft: menuIcon.bind(this, "menu", navData.navigation.openDrawer),
   };
 };
 
