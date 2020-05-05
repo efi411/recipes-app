@@ -9,6 +9,8 @@ import DefaultText from "../components/DefaultText";
 import LineText from "../components/LineText";
 import Color from "../constants/Colors";
 
+import { menuIcon, saveIcon } from "../components/Icons";
+
 const FiltersScreen = (props) => {
   const [isGlutenFree, setIsGlutenFree] = useState(false);
   const [isVegen, setIsVegen] = useState(false);
@@ -52,6 +54,14 @@ const FiltersScreen = (props) => {
       {getFilterItem("קינוח", isDessert, setIsDessert)}
     </View>
   );
+};
+
+export const filtersScreenOptions = (navData) => {
+  return {
+    title: "פילטרים",
+    headerLeft: menuIcon.bind(this, navData.navigation.openDrawer),
+    headerRight: saveIcon,
+  };
 };
 
 const styles = StyleSheet.create({

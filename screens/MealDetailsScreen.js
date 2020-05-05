@@ -2,7 +2,7 @@
  *  Author : Gil
  *  Created On : Tue Mar 31 2020
  *******************************************/
-
+import React, { useEffect } from "react";
 import { StyleSheet, View, ScrollView, Image } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import Color from "../constants/Colors";
@@ -12,10 +12,6 @@ import DefaultText from "../components/DefaultText";
 
 const MealDetailsScreen = (props) => {
   let { meal } = props.route.params;
-
-  // console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
-  // console.log(props.route.params);
-  // console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
   const mealName = meal.title;
   const complexity = meal.complexity;
@@ -100,11 +96,8 @@ const MealDetailsScreen = (props) => {
 };
 
 export const mealDetailsScreenOptions = (navData) => {
-  console.log("---------------------------------------");
-  console.log(navData.route.params);
-  console.log("---------------------------------------");
   return {
-    // title: navData.navigation.getParam("title"),
+    title: navData.route.params.meal.title,
   };
 };
 
