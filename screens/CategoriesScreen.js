@@ -7,6 +7,7 @@ import React from "react";
 import { StyleSheet, View, FlatList, ImageBackground } from "react-native";
 import { CHEFS } from "../data/dummy-data";
 import CategoryItem from "../components/CategoryItem";
+import { menuIcon } from "../components/Icons";
 
 const CategoriesScreen = (props) => {
   const { navigation } = props;
@@ -23,6 +24,7 @@ const CategoriesScreen = (props) => {
               onPress={() =>
                 navigation.navigate("ChefMeals", {
                   chefId: itemData.item.id,
+                  chefName: itemData.item.name,
                 })
               }
               title={itemData.item.name}
@@ -34,6 +36,13 @@ const CategoriesScreen = (props) => {
       </ImageBackground>
     </View>
   );
+};
+
+export const categoriesScreenOptions = (navData) => {
+  return {
+    title: "משתמשים",
+    headerLeft: menuIcon.bind(this, "menu", navData.navigation.openDrawer),
+  };
 };
 
 const styles = StyleSheet.create({

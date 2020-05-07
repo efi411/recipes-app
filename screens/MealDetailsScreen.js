@@ -2,10 +2,8 @@
  *  Author : Gil
  *  Created On : Tue Mar 31 2020
  *******************************************/
-
 import React, { useEffect } from "react";
 import { StyleSheet, View, ScrollView, Image } from "react-native";
-import { MEALS } from "../data/dummy-data";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import Color from "../constants/Colors";
 import LineText from "../components/LineText";
@@ -13,14 +11,7 @@ import MealDetailCircle from "../components/MealDetailCircle";
 import DefaultText from "../components/DefaultText";
 
 const MealDetailsScreen = (props) => {
-  const { navigation } = props;
-  let { mealId } = props.route.params;
-
-  const meal = MEALS.find((meal) => meal.id == mealId);
-
-  useEffect(() => {
-    navigation.setOptions({ title: meal.title });
-  }, []);
+  let { meal } = props.route.params;
 
   const mealName = meal.title;
   const complexity = meal.complexity;
@@ -102,6 +93,12 @@ const MealDetailsScreen = (props) => {
       </View>
     </ScrollView>
   );
+};
+
+export const mealDetailsScreenOptions = (navData) => {
+  return {
+    title: navData.route.params.meal.title,
+  };
 };
 
 const styles = StyleSheet.create({
