@@ -2,6 +2,7 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import CategoriesScreen, {
   categoriesScreenOptions,
@@ -13,6 +14,9 @@ import MealDetailsScreen, {
   mealDetailsScreenOptions,
 } from "../screens/MealDetailsScreen";
 import FilterScreen, { filtersScreenOptions } from "../screens/FiltersScreen";
+import FavoritesScreen, {
+  favoritsScreenOptions,
+} from "../screens/FavoritesScreen";
 
 import Color from "../constants/Colors";
 
@@ -35,7 +39,7 @@ const DrawerNavigator = () => {
         <Drawer.Screen
           name="Meals"
           options={{ title: "משתמשים" }}
-          component={StackNavigatorMeals}
+          component={TabNavigator}
         />
         <Drawer.Screen
           name="Filters"
@@ -44,6 +48,29 @@ const DrawerNavigator = () => {
         />
       </Drawer.Navigator>
     </NavigationContainer>
+  );
+};
+
+const TabNavigator = () => {
+  const Tab = createBottomTabNavigator();
+  return (
+    <Tab.Navigator screenOptions={defaultOptions}>
+      <Tab.Screen name="Meals" component={StackNavigatorMeals} />
+      <Tab.Screen name="Favorites" component={StackNavigatorFavorites} />
+    </Tab.Navigator>
+  );
+};
+
+const StackNavigatorFavorites = (props) => {
+  const Stack = createStackNavigator();
+  return (
+    <Stack.Navigator screenOptions={defaultOptions}>
+      <Stack.Screen
+        name="Favorites"
+        component={FavoritesScreen}
+        options={favoritsScreenOptions}
+      />
+    </Stack.Navigator>
   );
 };
 
