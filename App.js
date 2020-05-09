@@ -4,6 +4,15 @@ import { AppLoading } from "expo";
 import { useFonts } from "@use-expo/font";
 import WelcomeScreen from "./screens/WelcomeScreen";
 import DrawerNavigator from "./navigation/Navigators";
+import { createStore, combineReducers } from "redux";
+import mealsReducer from "./store/reducers/meals";
+import { Provider } from "react-redux";
+
+const rootReducer = combineReducers({
+  meals: mealsReducer,
+});
+
+const store = createStore(rootReducer);
 
 try {
   I18nManager.forceRTL(true);
@@ -20,7 +29,11 @@ export default (props) => {
 
   let currScreen = <WelcomeScreen onStartPress={startAppPage} />;
   if (!isWelcomeScreen) {
-    currScreen = <DrawerNavigator />;
+    currScreen = (
+      <Provider store={store}>
+        <DrawerNavigator />
+      </Provider>
+    );
   }
 
   let [fontsLoaded] = useFonts({
