@@ -13,7 +13,16 @@ const ChefMealsScreen = (props) => {
 
   const chefMeals = MEALS.filter((meal) => meal.chef == chefId);
 
-  return <MealsList navigation={navigation} mealsData={chefMeals} />;
+  return (
+    <MealsList
+      onPress={(mealData) =>
+        navigation.navigate("MealDetailsMeals", {
+          meal: mealData,
+        })
+      }
+      mealsData={chefMeals}
+    />
+  );
 };
 
 export const chefMealsScreenOptions = (navData) => {

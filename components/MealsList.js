@@ -11,21 +11,18 @@ import {
   TouchableNativeFeedback,
 } from "react-native";
 import MealItem from "../components/MealItem";
-import { MEALS } from "../data/dummy-data";
 
 const MealsList = (props) => {
-  let { mealsData, navigation } = props;
+  let { mealsData } = props;
 
   const renderMealItem = (itemData) => {
-    const mealData = MEALS.find((meal) => meal.id == itemData.item.id);
+    const mealData = mealsData.find((meal) => meal.id == itemData.item.id);
 
     return (
       <MealItem
-        onPress={() =>
-          navigation.navigate("MealDetails", {
-            meal: mealData,
-          })
-        }
+        onPress={() => {
+          props.onPress(mealData);
+        }}
         mealName={itemData.item.title}
         mealImage={itemData.item.image}
         mealDuration={itemData.item.duration}
