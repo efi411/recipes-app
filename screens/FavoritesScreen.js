@@ -10,11 +10,21 @@ import { menuIcon } from "../components/Icons";
 import Color from "../constants/Colors";
 
 const FavoritsScreen = (props) => {
+  const { navigation } = props;
   const favMeals = MEALS.filter(
     (meal) => meal.id == "m1" || meal.id == "m5" || meal.id == "m6"
   );
 
-  return <MealsList navigation={props.navigation} mealsData={favMeals} />;
+  return (
+    <MealsList
+      onPress={(mealData) =>
+        navigation.navigate("MealDetailsFav", {
+          meal: mealData,
+        })
+      }
+      mealsData={favMeals}
+    />
+  );
 };
 
 export const favoritsScreenOptions = (navData) => {

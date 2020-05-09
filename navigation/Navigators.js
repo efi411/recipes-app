@@ -70,18 +70,10 @@ const StackNavigatorFavorites = (props) => {
         component={FavoritesScreen}
         options={favoritsScreenOptions}
       />
-    </Stack.Navigator>
-  );
-};
-
-const StackNavigatorFilters = () => {
-  const Stack = createStackNavigator();
-  return (
-    <Stack.Navigator screenOptions={defaultOptions}>
       <Stack.Screen
-        name="Filters"
-        component={FilterScreen}
-        options={filtersScreenOptions}
+        name="MealDetailsFav"
+        component={MealDetailsScreen}
+        options={mealDetailsScreenOptions}
       />
     </Stack.Navigator>
   );
@@ -102,9 +94,22 @@ const StackNavigatorMeals = () => {
         options={chefMealsScreenOptions}
       />
       <Stack.Screen
-        name="MealDetails"
+        name="MealDetailsMeals"
         component={MealDetailsScreen}
         options={mealDetailsScreenOptions}
+      />
+    </Stack.Navigator>
+  );
+};
+
+const StackNavigatorFilters = () => {
+  const Stack = createStackNavigator();
+  return (
+    <Stack.Navigator screenOptions={defaultOptions}>
+      <Stack.Screen
+        name="Filters"
+        component={FilterScreen}
+        options={filtersScreenOptions}
       />
     </Stack.Navigator>
   );
