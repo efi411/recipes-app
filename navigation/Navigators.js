@@ -54,9 +54,25 @@ const DrawerNavigator = () => {
 const TabNavigator = () => {
   const Tab = createBottomTabNavigator();
   return (
-    <Tab.Navigator screenOptions={defaultOptions}>
-      <Tab.Screen name="Meals" component={StackNavigatorMeals} />
-      <Tab.Screen name="Favorites" component={StackNavigatorFavorites} />
+    <Tab.Navigator
+      tabBarOptions={{
+        labelStyle: { fontSize: 16, color: "white" },
+        style: {
+          backgroundColor: Color.primaryColor,
+          paddingBottom: 15,
+        },
+      }}
+    >
+      <Tab.Screen
+        name="Meals"
+        options={{ tabBarLabel: "מנות" }}
+        component={StackNavigatorMeals}
+      />
+      <Tab.Screen
+        name="Favorites"
+        options={{ tabBarLabel: "מועדפים" }}
+        component={StackNavigatorFavorites}
+      />
     </Tab.Navigator>
   );
 };
