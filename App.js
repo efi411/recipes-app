@@ -6,10 +6,12 @@ import WelcomeScreen from "./screens/WelcomeScreen";
 import DrawerNavigator from "./navigation/Navigators";
 import { createStore, combineReducers } from "redux";
 import mealsReducer from "./store/reducers/meals";
+import chefsReducer from "./store/reducers/chefs";
 import { Provider } from "react-redux";
 
 const rootReducer = combineReducers({
   meals: mealsReducer,
+  chefs: chefsReducer,
 });
 
 const store = createStore(rootReducer);

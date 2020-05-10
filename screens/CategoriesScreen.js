@@ -5,12 +5,14 @@
 
 import React from "react";
 import { StyleSheet, View, FlatList, ImageBackground } from "react-native";
-import { CHEFS } from "../data/dummy-data";
 import CategoryItem from "../components/CategoryItem";
 import { menuIcon } from "../components/Icons";
+import { useSelector } from "react-redux";
 
 const CategoriesScreen = (props) => {
   const { navigation } = props;
+  const chefs = useSelector((state) => state.chefs.chefs);
+
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -18,7 +20,7 @@ const CategoriesScreen = (props) => {
         style={styles.image}
       >
         <FlatList
-          data={CHEFS}
+          data={chefs}
           renderItem={(itemData) => (
             <CategoryItem
               onPress={() =>
