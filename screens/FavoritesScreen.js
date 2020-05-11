@@ -11,8 +11,7 @@ import { useSelector } from "react-redux";
 
 const FavoritsScreen = (props) => {
   const { navigation } = props;
-  const favMeals = useSelector((state) => state.meals.favoriteMeals);
-
+  const favMeals = useSelector((state) => state.meals.favMeals);
   return (
     <MealsList
       onPress={(mealData) =>

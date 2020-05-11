@@ -2,16 +2,27 @@
  *  Author : Gil
  *  Created On : Tue Mar 31 2020
  *******************************************/
-import React from "react";
+import React, { useEffect, useCallback } from "react";
 import { StyleSheet, View, ScrollView, Image } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import Color from "../constants/Colors";
 import LineText from "../components/LineText";
 import MealDetailCircle from "../components/MealDetailCircle";
 import DefaultText from "../components/DefaultText";
+import { headerIcon } from "../components/Icons";
+import { useDispatch } from "react-redux";
 
 const MealDetailsScreen = (props) => {
   let { meal } = props.route.params;
+  const dispatch = useDispatch();
+
+  const toggleFavoriteHandler = useCallback(() => {
+    console.log("change fav");
+  }, [dispatch, meal]);
+
+  useEffect(() => {
+    props.navigation.setParams({ toggleFav: toggleFavoriteHandler });
+  }, [toggleFavoriteHandler]);
 
   const mealName = meal.title;
   const complexity = meal.complexity;
@@ -96,8 +107,13 @@ const MealDetailsScreen = (props) => {
 };
 
 export const mealDetailsScreenOptions = (navData) => {
+  const { isFav, toggleFav } = navData.route.params;
+  selector = navData.route.params.useSelector;
+  const iconName = isFav ? "star" : "star-border";
+
   return {
     title: navData.route.params.meal.title,
+    headerRight: headerIcon.bind(this, iconName, toggleFav),
   };
 };
 
