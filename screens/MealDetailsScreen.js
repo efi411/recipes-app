@@ -2,7 +2,7 @@
  *  Author : Gil
  *  Created On : Tue Mar 31 2020
  *******************************************/
-import React, { useEffect } from "react";
+import React from "react";
 import { StyleSheet, View, ScrollView, Image } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import Color from "../constants/Colors";

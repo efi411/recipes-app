@@ -4,16 +4,14 @@
  *******************************************/
 
 import React from "react";
-import { MEALS } from "../data/dummy-data";
 import MealsList from "../components/MealsList";
 import { menuIcon } from "../components/Icons";
 import Color from "../constants/Colors";
+import { useSelector } from "react-redux";
 
 const FavoritsScreen = (props) => {
   const { navigation } = props;
-  const favMeals = MEALS.filter(
-    (meal) => meal.id == "m1" || meal.id == "m5" || meal.id == "m6"
-  );
+  const favMeals = useSelector((state) => state.meals.favoriteMeals);
 
   return (
     <MealsList
